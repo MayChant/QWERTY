@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b953f883ddc5a40a568f9b77ee8606, type: 3}
+  m_Name: Quack Collection
+  m_EditorClassIdentifier: 
+  collection:
+  - We're now the only 7.6 billion people left on earth. People aren't talking about
+    this enough.
+  - People can easily get out of homelessness by investing in real estates, yet so
+    few of them are doing that. Curious.
+  - It worries me that our next generation is not nearly as old as we are.

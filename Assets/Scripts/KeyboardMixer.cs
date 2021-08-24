@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,10 +9,12 @@ public class KeyboardMixer : MonoBehaviour
     public Dictionary<char, char> charMap;
     public MixedKeyboard[] mixedKeyboards;
     private Text text;
-    
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameManager.instance;
         charMap = mixedKeyboards[Random.Range(0, mixedKeyboards.Length)].charMap;
         text = GetComponent<Text>();
     }
@@ -35,7 +38,7 @@ public class KeyboardMixer : MonoBehaviour
             }
             else if ((c == '\n') || (c == '\r')) // enter/return
             {
-                // submit
+                gameManager.ProcessSubmission(Submit());
             }
             else
             {
@@ -52,5 +55,46 @@ public class KeyboardMixer : MonoBehaviour
             return realChar;
         }
         return newChar;
+    }
+
+    public int Submit()
+    {
+        // Return error count
+        // Return error count
+        gameManager.feedback = "";
+        string submission = text.text.ToUpper();
+        string currentQuack = gameManager.currentQuack.ToUpper();
+        if (submission.Equals(currentQuack))
+        {
+            gameManager.feedback = "Good job.";
+            return 0;
+        }
+        int errorCount = 0;
+        string[] submissionWords = submission.Split(' ');
+        string[] currentQuackWords = currentQuack.Split(' ');
+        foreach (string submissionWord in submissionWords)
+        {
+            if (!currentQuackWords.Contains(submissionWord))
+            {
+                // TODO: compain about first error
+                if (gameManager.feedback.Equals(""))
+                {
+                    gameManager.feedback = string.Format("Who told you to send \"{0}\"? Not me, intern. Not me.", submissionWord);
+                }
+                errorCount++;
+            }
+        }
+        foreach (string quackWord in currentQuackWords)
+        {
+            if (!submissionWords.Contains(quackWord))
+            {
+                if (gameManager.feedback.Equals(""))
+                {
+                    gameManager.feedback = string.Format("I said \"{0}\", intern. Are you even listening?", quackWord);
+                }
+                errorCount++;
+            }
+        }
+        return errorCount;
     }
 }
