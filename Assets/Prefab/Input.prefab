@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5974452228597259215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5974452228597259214}
+  - component: {fileID: 5974452228597259212}
+  - component: {fileID: 5974452228597259213}
+  - component: {fileID: 5974452228597259211}
+  m_Layer: 5
+  m_Name: Input
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5974452228597259214
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974452228597259215}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -15, y: 25}
+  m_SizeDelta: {x: 220, y: 80}
+  m_Pivot: {x: 1, y: 0}
+--- !u!222 &5974452228597259212
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974452228597259215}
+  m_CullTransparentMesh: 1
+--- !u!114 &5974452228597259213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974452228597259215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fcfe3c3708f9d924a8ff0c2f3a8eca0b, type: 3}
+    m_FontSize: 13
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: PEOPLE CAN EASILY GET OUT OF HOMELESSNESS BY INVESTING IN REAL ESTATES,
+    YET SO FEW OF THEM ARE DOING IT. CURIOUS.
+--- !u!114 &5974452228597259211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974452228597259215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e321f875c4c8e4ca61883a39899bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixedKeyboards:
+  - {fileID: 11400000, guid: d996c323430b13545a573902d8676bd4, type: 2}
+  - {fileID: 11400000, guid: 059dba4fc284fa047b4a5f196b8d944a, type: 2}
+  - {fileID: 11400000, guid: f03358e8dcf4c6943a866a91142536a2, type: 2}
+  - {fileID: 11400000, guid: 10bd491c960d83243a0b03f13fb09661, type: 2}
+  - {fileID: 11400000, guid: 9450e1c7857909846b5b91fc3498416e, type: 2}
+  - {fileID: 11400000, guid: 892cfb344dbdffd40a8b334a08311f92, type: 2}
+  - {fileID: 11400000, guid: 4edd0f15b1509574d9088ffad6679600, type: 2}
+  - {fileID: 11400000, guid: 6b0acb064d20083478e22fcd6a487634, type: 2}
+  - {fileID: 11400000, guid: 2ed7253713f577d44b5056cfb59a62cb, type: 2}
+  - {fileID: 11400000, guid: 567a57bc6fa517547996aa95f840aac3, type: 2}
