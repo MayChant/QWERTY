@@ -38,7 +38,7 @@ public class KeyboardMixer : MonoBehaviour
             }
             else if ((c == '\n') || (c == '\r')) // enter/return
             {
-                gameManager.ProcessSubmission(Submit());
+                ChooseSubmit();
             }
             else
             {
@@ -55,6 +55,11 @@ public class KeyboardMixer : MonoBehaviour
             return realChar;
         }
         return newChar;
+    }
+
+    public void ChooseSubmit()
+    {
+        gameManager.ProcessSubmission(Submit());
     }
 
     public int Submit()
