@@ -6,22 +6,23 @@ public class Timer : MonoBehaviour
 {
     // Start is called before the first frame update
     public float time;
-    public GameStateManager gameStateManager;
+    public KeyboardMixer keyboardMixer;
+    private GameManager gameManager;
     void Start(){
-        gameStateManager = (gameObject.GetComponent( typeof(GameStateManager) ) as GameStateManager);
+        gameManager = GameManager.instance;
     }
     private void OnEnable() {
         time = 180;
     }
     void Update()
     {
-        if(time > 0 && gameStateManager.gameState == GameStateManager.GameState.Quack)
+        if(time > 0 && gameManager.gameState == GameManager.GameState.Quack)
         {
             time -= Time.deltaTime;
         }
         else
         {
-            gameStateManager.SubmitCurrentQuack();
+            keyboardMixer.ChooseSubmit();
         }
     }
 }

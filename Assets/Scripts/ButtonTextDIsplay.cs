@@ -4,27 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonTextDIsplay : MonoBehaviour
+public class ButtonTextDisplay : MonoBehaviour
 {
-    public GameStateManager gameStateManager;
+    private GameManager gameManager;
     public Text buttonText;
+    public Timer timer;
     // Start is called before the first frame update
     void Start()
     {
-        gameStateManager = GameObject.Find("GameStateManager").GetComponent<GameStateManager>();
-        buttonText = gameObject.transform.Find("Text").GetComponent<Text>(); 
+        gameManager = GameManager.instance;
     }
     // Update is called once per frame
     void Update()
     {
-        if(gameStateManager.gameState != GameStateManager.GameState.Quack)
+        if(gameManager.gameState != GameManager.GameState.Quack)
         {
             
-            buttonText.text = "Submit";
+            buttonText.text = "QUACK";
         }
         else
         {
-            buttonText.text = "Submit (" + Math.Floor(gameStateManager.timer.time).ToString() + ")";
+            buttonText.text = "QUACK (" + Math.Floor(timer.time).ToString() + ")";
         }
         
     }

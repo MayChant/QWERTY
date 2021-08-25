@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,20 @@ public class GameManager : MonoBehaviour
     public string feedback;
     public int lives;
     public int streak;
+    public bool isGivingFeedback;
+    public Text dialogue;
+    public Text userInput;
+    public Button nextQuackButton;
+    public Button submitButton;
+    public enum GameState
+    {
+        Intro,
+        Quack,
+        FeedBack,
+        Ending,
+        Endless,
+    }
+    public GameState gameState;
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,17 +43,38 @@ public class GameManager : MonoBehaviour
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
         currentQuack = quacks[quackIndex];
         lives = 10;
+        gameState = GameState.Quack;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        switch (gameState)
+        {
+            case GameState.FeedBack:
+                dialogue.text = feedback.ToUpper();
+                nextQuackButton.gameObject.SetActive(true);
+                submitButton.gameObject.SetActive(false);
+
+                break;
+            case GameState.Quack:
+                dialogue.text = currentQuack.ToUpper();
+                nextQuackButton.gameObject.SetActive(false);
+                submitButton.gameObject.SetActive(true);
+
+                break;
+            default:
+                dialogue.text = "this is a default dialogue.".ToUpper();
+                nextQuackButton.gameObject.SetActive(false);
+                break;
+        }
     }
 
     public void ToNextQuack()
     {
-        quackIndex++;
+        gameState = GameState.Quack;
+        userInput.text = "";
+        quackIndex = (quackIndex + 1) % quacks.Length;
         currentQuack = quacks[quackIndex];
     }
 
@@ -53,7 +89,6 @@ public class GameManager : MonoBehaviour
             }
         }
         lives -= errorCount;
-        // TODO: display dialogue
-        // TODO: Gameover
+        gameState = GameState.FeedBack;
     }
 }

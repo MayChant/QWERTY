@@ -31,7 +31,6 @@ public class GameStateManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        
     }
     // Update is called once per frame
     private void Start() {
