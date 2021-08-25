@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
         currentQuack = quacks[quackIndex];
-        lives = 200;
+        lives = 10;
         gameState = GameState.Quack;
         healthBar.GetComponent<Slider>().value = lives;
     }
@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
     {
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
         currentQuack = quacks[quackIndex];
-        lives = 200;
+        lives = 10;
         gameState = GameState.Quack;
         healthBar.GetComponent<Slider>().value = lives;
     }
