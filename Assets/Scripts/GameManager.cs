@@ -19,12 +19,15 @@ public class GameManager : MonoBehaviour
     public Text userInput;
     public Button nextQuackButton;
     public Button submitButton;
+    public GameObject healthBar;
+    public Image gameOverImage;
     public enum GameState
     {
         Intro,
         Quack,
         FeedBack,
         Ending,
+        GameOver,
         Endless,
     }
     public GameState gameState;
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour
         currentQuack = quacks[quackIndex];
         lives = 10;
         gameState = GameState.Quack;
+        healthBar.GetComponent<Slider>().value = lives;
     }
 
     // Update is called once per frame
@@ -55,17 +59,24 @@ public class GameManager : MonoBehaviour
                 dialogue.text = feedback.ToUpper();
                 nextQuackButton.gameObject.SetActive(true);
                 submitButton.gameObject.SetActive(false);
+                gameOverImage.gameObject.SetActive(false);
 
                 break;
             case GameState.Quack:
                 dialogue.text = currentQuack.ToUpper();
                 nextQuackButton.gameObject.SetActive(false);
                 submitButton.gameObject.SetActive(true);
+                gameOverImage.gameObject.SetActive(false);
+
+                break;
+            case GameState.GameOver:
+                gameOverImage.gameObject.SetActive(true);
 
                 break;
             default:
                 dialogue.text = "this is a default dialogue.".ToUpper();
                 nextQuackButton.gameObject.SetActive(false);
+                gameOverImage.gameObject.SetActive(false);
                 break;
         }
     }
@@ -88,7 +99,25 @@ public class GameManager : MonoBehaviour
                 lives = Mathf.Min(lives + 1, 10);
             }
         }
-        lives -= errorCount;
-        gameState = GameState.FeedBack;
+        //lives -= errorCount;
+        if ((lives -= errorCount) > 0)
+        {
+            healthBar.GetComponent<Slider>().value = lives;
+            gameState = GameState.FeedBack;
+            lives -= errorCount;
+        }
+        else if((lives -= errorCount) <= 0)
+        {
+            gameState = GameState.GameOver;    
+        }
+        
+    }
+    public void StartOver()
+    {
+        quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
+        currentQuack = quacks[quackIndex];
+        lives = 10;
+        gameState = GameState.Quack;
+        healthBar.GetComponent<Slider>().value = lives;
     }
 }
