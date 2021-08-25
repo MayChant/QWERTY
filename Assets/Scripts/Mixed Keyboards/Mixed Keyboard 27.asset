@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b136f5afbfbdd64f91af356ae756270, type: 3}
+  m_Name: Mixed Keyboard 27
+  m_EditorClassIdentifier: 
+  keyMapDoc: 'Key,Letter
+
+    Q,Y
+
+    W,H
+
+    E,L
+
+    R,B
+
+    T,G
+
+    Y,Z
+
+    U,C
+
+    I,K
+
+    O,F
+
+    P,M
+
+    A,T
+
+    S,Q
+
+    D,I
+
+    F,E
+
+    G,D
+
+    H,A
+
+    J,P
+
+    K,S
+
+    L,X
+
+    Z,U
+
+    X,R
+
+    C,N
+
+    V,J
+
+    B,W
+
+    N,V
+
+    M,O
+
+'
