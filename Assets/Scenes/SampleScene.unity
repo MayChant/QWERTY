@@ -371,7 +371,7 @@ MonoBehaviour:
   audioSource: {fileID: 140867541}
   correct: {fileID: 8300000, guid: 080cd3dd4a9a6ad43ae884d5342e00b3, type: 3}
   wrong: {fileID: 8300000, guid: d4c32761c713f9d4683c2f0c8a398038, type: 3}
-  enabled: 0
+  isEnabled: 0
 --- !u!82 &140867541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -631,6 +631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   keyboardMixer: {fileID: 140867540}
+  countTime: 310
 --- !u!1 &334084187
 GameObject:
   m_ObjectHideFlags: 0

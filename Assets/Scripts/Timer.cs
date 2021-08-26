@@ -8,11 +8,16 @@ public class Timer : MonoBehaviour
     public float time;
     public KeyboardMixer keyboardMixer;
     private GameManager gameManager;
+    public int countTime;
     void Start(){
         gameManager = GameManager.instance;
     }
     private void OnEnable() {
-        time = 180;
+        if(gameManager.gameState != GameManager.GameState.Endless)
+        {
+            countTime -= 5;
+        }
+        time = countTime;
     }
     void Update()
     {
