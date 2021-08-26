@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     public int countTime;
     void Start(){
         gameManager = GameManager.instance;
+        time = countTime;
     }
     private void OnEnable() {
         if(gameManager.gameState != GameManager.GameState.Endless)

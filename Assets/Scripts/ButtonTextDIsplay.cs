@@ -15,6 +15,7 @@ public class ButtonTextDisplay : MonoBehaviour
         gameManager = GameManager.instance;
     }
     // Update is called once per frame
+    
     void Update()
     {
         if(gameManager.gameState != GameManager.GameState.Quack)
