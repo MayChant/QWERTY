@@ -8,6 +8,9 @@ public class KeyboardMixer : MonoBehaviour
 {
     public Dictionary<char, char> charMap;
     public MixedKeyboard[] mixedKeyboards;
+    public AudioSource audioSource;
+    public AudioClip correct;
+    public AudioClip wrong;
     private Text text;
     private GameManager gameManager;
 
@@ -72,6 +75,8 @@ public class KeyboardMixer : MonoBehaviour
         if (submission.Equals(currentQuack))
         {
             gameManager.feedback = "Good job.";
+            audioSource.clip = correct;
+            audioSource.Play();
             return 0;
         }
         int errorCount = 0;
@@ -100,6 +105,8 @@ public class KeyboardMixer : MonoBehaviour
                 errorCount++;
             }
         }
+        audioSource.clip = wrong;
+        audioSource.Play();
         return errorCount;
     }
 }

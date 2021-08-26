@@ -14,56 +14,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyMapDoc: 'Key,Letter
 
-    Q,E
+    Q,O
 
-    W,I
+    W,P
 
-    E,Y
+    E,Z
 
-    R,U
+    R,Y
 
-    T,Q
+    T,A
 
-    Y,S
+    Y,R
 
-    U,V
+    U,L
 
-    I,B
+    I,U
 
-    O,D
+    O,M
 
-    P,N
+    P,K
 
-    A,L
+    A,W
 
-    S,G
+    S,X
 
-    D,X
+    D,I
 
-    F,O
+    F,S
 
-    G,W
+    G,G
 
-    H,C
+    H,T
 
-    J,K
+    J,D
 
-    K,H
+    K,V
 
-    L,F
+    L,N
 
-    Z,Z
+    Z,Q
 
-    X,P
+    X,F
 
-    C,A
+    C,E
 
-    V,M
+    V,J
 
-    B,J
+    B,H
 
-    N,T
+    N,B
 
-    M,R
+    M,C
 
 '
