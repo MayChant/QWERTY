@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int lives;
     public int streak;
     public bool isGivingFeedback;
+    public KeyboardMixer keyboard;
     public Text dialogue;
     public Text userInput;
     public Button nextQuackButton;
@@ -48,7 +49,12 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        Initialize();
+        quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
+        currentQuack = quacks[quackIndex];
+        lives = 12;
+        gameState = GameState.Quack;
+        healthBarSlider.value = lives;
+        healthBarHandle.sprite = fullHealthHandle;
     }
 
     // Update is called once per frame
@@ -61,6 +67,7 @@ public class GameManager : MonoBehaviour
                 nextQuackButton.gameObject.SetActive(true);
                 submitButton.gameObject.SetActive(false);
                 gameOverImage.gameObject.SetActive(false);
+                keyboard.isEnabled = false;
 
                 break;
             case GameState.Quack:
@@ -68,16 +75,19 @@ public class GameManager : MonoBehaviour
                 nextQuackButton.gameObject.SetActive(false);
                 submitButton.gameObject.SetActive(true);
                 gameOverImage.gameObject.SetActive(false);
+                keyboard.isEnabled = true;
 
                 break;
             case GameState.GameOver:
                 gameOverImage.gameObject.SetActive(true);
+                keyboard.isEnabled = false;
 
                 break;
             default:
                 dialogue.text = "this is a default dialogue.".ToUpper();
                 nextQuackButton.gameObject.SetActive(false);
                 gameOverImage.gameObject.SetActive(false);
+                keyboard.isEnabled = false;
                 break;
         }
     }
@@ -144,5 +154,6 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Quack;
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
+        keyboard.RemixKeyboard();
     }
 }

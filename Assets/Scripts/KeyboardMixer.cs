@@ -14,12 +14,33 @@ public class KeyboardMixer : MonoBehaviour
     private Text text;
     private GameManager gameManager;
 
+    public bool isEnabled;
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameManager.instance;
-        charMap = mixedKeyboards[Random.Range(0, mixedKeyboards.Length)].charMap;
+
+        foreach (MixedKeyboard keyboard in mixedKeyboards)
+        {
+            keyboard.charMap = new Dictionary<char, char>();
+            string[] lines = keyboard.keyMapDoc.Split('\n');
+            for (int i = 1; i < lines.Length - 1; i++)
+            {
+                string[] pair = lines[i].Split(',');
+                keyboard.charMap[pair[0].ToCharArray()[0]] = pair[1].ToCharArray()[0];
+            }
+        }
+        RemixKeyboard();
         text = GetComponent<Text>();
+        isEnabled = true;
+    }
+
+    public void RemixKeyboard()
+    {
+        int keyboardIndex = Random.Range(0, mixedKeyboards.Length);
+        Debug.Log(keyboardIndex);
+        charMap = mixedKeyboards[keyboardIndex].charMap;
     }
 
     // Update is called once per frame
@@ -30,6 +51,10 @@ public class KeyboardMixer : MonoBehaviour
 
     public void ProcessNewKey()
     {
+        if (!isEnabled)
+        {
+            return;
+        }
         foreach (char c in Input.inputString)
         {
             if (c == '\b') // has backspace/delete been pressed?
@@ -82,6 +107,17 @@ public class KeyboardMixer : MonoBehaviour
         int errorCount = 0;
         string[] submissionWords = submission.Split(' ');
         string[] currentQuackWords = currentQuack.Split(' ');
+        foreach (string quackWord in currentQuackWords)
+        {
+            if (!submissionWords.Contains(quackWord))
+            {
+                if (gameManager.feedback.Equals(""))
+                {
+                    gameManager.feedback = string.Format("I said \"{0}\", intern. Are you even listening?", quackWord);
+                }
+                errorCount++;
+            }
+        }
         foreach (string submissionWord in submissionWords)
         {
             if (!currentQuackWords.Contains(submissionWord))
@@ -90,17 +126,6 @@ public class KeyboardMixer : MonoBehaviour
                 if (gameManager.feedback.Equals(""))
                 {
                     gameManager.feedback = string.Format("Who told you to send \"{0}\"? Not me, intern. Not me.", submissionWord);
-                }
-                errorCount++;
-            }
-        }
-        foreach (string quackWord in currentQuackWords)
-        {
-            if (!submissionWords.Contains(quackWord))
-            {
-                if (gameManager.feedback.Equals(""))
-                {
-                    gameManager.feedback = string.Format("I said \"{0}\", intern. Are you even listening?", quackWord);
                 }
                 errorCount++;
             }
