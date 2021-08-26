@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84eed66c3a6a1b645bf7402ac81eaea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonText: {fileID: 412770173}
+  buttonText: {fileID: 1436319190}
   timer: {fileID: 141003937}
 --- !u!114 &141003937
 MonoBehaviour:
@@ -781,7 +781,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: QUACK (4:00)
+  m_Text: QUACK
 --- !u!222 &412770174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2171,6 +2171,10 @@ PrefabInstance:
     - target: {fileID: 834828394949693717, guid: d5a26dd58bbc64149b24870cb533da12, type: 3}
       propertyPath: m_Name
       value: Quack
+      objectReference: {fileID: 0}
+    - target: {fileID: 834828394949693718, guid: d5a26dd58bbc64149b24870cb533da12, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 834828394949693718, guid: d5a26dd58bbc64149b24870cb533da12, type: 3}
       propertyPath: m_AnchorMax.y
