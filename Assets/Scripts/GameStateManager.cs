@@ -1,3 +1,4 @@
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class GameStateManager : MonoBehaviour
     public Button submitButton;
     public Timer timer;
     public GameManager gameManager;
+    [SerializeField] private TextWriter textWriter;
     public enum GameState{
         Intro,
         Quack,
@@ -18,6 +20,7 @@ public class GameStateManager : MonoBehaviour
         Ending,
         Endless,
     }
+    public GameState previousState;
     public GameState gameState; 
     // Start is called before the first frame update
     void Awake()
@@ -47,13 +50,24 @@ public class GameStateManager : MonoBehaviour
         switch (gameState)
         {
             case GameState.FeedBack:
-                dialogue.text = gameManager.feedback;
-                nextQuackButton.gameObject.SetActive(true);
-                submitButton.gameObject.SetActive(false);
+                if(previousState != GameState.FeedBack){
+                    textWriter.AddTextToWrite(dialogue, gameManager.feedback, 20f);
+                    nextQuackButton.gameObject.SetActive(true);
+                    submitButton.gameObject.SetActive(false);
+                    previousState = GameState.FeedBack;
+                }
+                //dialogue.text = gameManager.feedback;
+                
                 
                 break;
             case GameState.Quack:
-                dialogue.text = gameManager.currentQuack;
+                if(previousState != GameState.Quack){
+                    textWriter.AddTextToWrite(dialogue, gameManager.currentQuack, 20f);
+                    nextQuackButton.gameObject.SetActive(true);
+                    submitButton.gameObject.SetActive(false);
+                    previousState = GameState.Quack;
+                }
+                //dialogue.text = gameManager.currentQuack;
                 nextQuackButton.gameObject.SetActive(false);
                 submitButton.gameObject.SetActive(true);
                 
@@ -63,19 +77,23 @@ public class GameStateManager : MonoBehaviour
                 nextQuackButton.gameObject.SetActive(false);
                 break;
         }
-        
     }
 
     public void StartNextQuack(){
+        previousState = gameState;
         gameState = GameState.Quack;
         userInput.text = "";
         timer.time = 180;
         gameManager.ToNextQuack();
+        
+        
     }
     public void SubmitCurrentQuack(){
         int errorCount = (userInput.GetComponent( typeof(KeyboardMixer) ) as KeyboardMixer).Submit();
         gameManager.ProcessSubmission(errorCount);
+        previousState = gameState;
         gameState = GameState.FeedBack;
+        
         
     }
 }
