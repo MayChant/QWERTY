@@ -12,56 +12,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b136f5afbfbdd64f91af356ae756270, type: 3}
   m_Name: Mixed Keyboard 1
   m_EditorClassIdentifier: 
-  keyMapDoc: 'Q->J
+  keyMapDoc: 'Key,Letter
 
-    W->P
+    Q,U
 
-    E->K
+    W,B
 
-    R->S
+    E,Y
 
-    T->Y
+    R,G
 
-    Y->Z
+    T,W
 
-    U->W
+    Y,V
 
-    I->E
+    U,Q
 
-    O->L
+    I,R
 
-    P->G
+    O,S
 
-    A->V
+    P,T
 
-    S->T
+    A,M
 
-    D->D
+    S,C
 
-    F->R
+    D,E
 
-    G->Q
+    F,K
 
-    H->H
+    G,L
 
-    J->F
+    H,F
 
-    K->N
+    J,I
 
-    L->A
+    K,X
 
-    Z->O
+    L,H
 
-    X->M
+    Z,Z
 
-    C->B
+    X,D
 
-    V->C
+    C,J
 
-    B->X
+    V,O
 
-    N->I
+    B,A
 
-    M->U
+    N,P
+
+    M,N
 
 '
