@@ -1,3 +1,4 @@
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
     public Sprite noHealthHandle;
     public Image gameOverImage;
     public BossVoice bossVoice;
+    public Timer timer;
+    [SerializeField] private TextWriter textWriter;
     public enum GameState
     {
         Intro,
@@ -36,6 +39,7 @@ public class GameManager : MonoBehaviour
         GameOver,
         Endless,
     }
+    public GameState previousState;
     public GameState gameState;
     // Start is called before the first frame update
     void Awake()
@@ -63,7 +67,12 @@ public class GameManager : MonoBehaviour
         switch (gameState)
         {
             case GameState.FeedBack:
-                dialogue.text = feedback.ToUpper();
+                if(previousState != GameState.FeedBack)
+                {
+                    textWriter.AddTextToWrite(dialogue, feedback.ToUpper(), .05f);
+                    previousState = GameState.FeedBack;
+                }
+                //dialogue.text = feedback.ToUpper();
                 nextQuackButton.gameObject.SetActive(true);
                 submitButton.gameObject.SetActive(false);
                 gameOverImage.gameObject.SetActive(false);
@@ -71,7 +80,12 @@ public class GameManager : MonoBehaviour
 
                 break;
             case GameState.Quack:
-                dialogue.text = currentQuack.ToUpper();
+                if(previousState != GameState.Quack)
+                {
+                    textWriter.AddTextToWrite(dialogue, currentQuack.ToUpper(), .05f);
+                    previousState = GameState.Quack;
+                }
+                //dialogue.text = currentQuack.ToUpper();
                 nextQuackButton.gameObject.SetActive(false);
                 submitButton.gameObject.SetActive(true);
                 gameOverImage.gameObject.SetActive(false);
@@ -94,6 +108,7 @@ public class GameManager : MonoBehaviour
 
     public void ToNextQuack()
     {
+        previousState = gameState;
         gameState = GameState.Quack;
         userInput.text = "";
         quackIndex = (quackIndex + 1) % quacks.Length;
@@ -119,12 +134,14 @@ public class GameManager : MonoBehaviour
         //lives -= errorCount;
         if ((lives -= errorCount) > 0)
         {
+            previousState = gameState;
             healthBarSlider.value = lives;
             gameState = GameState.FeedBack;
             lives -= errorCount;
         }
         else if ((lives -= errorCount) <= 0)
         {
+            previousState = gameState;
             gameState = GameState.GameOver;
         }
         RenderHealthBarHandle();
@@ -155,5 +172,7 @@ public class GameManager : MonoBehaviour
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
         keyboard.RemixKeyboard();
+        timer.countTime = 310;
+        
     }
 }

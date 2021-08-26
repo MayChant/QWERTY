@@ -128,6 +128,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5974452228597259214, guid: 970938a421fcc4f4595551f09a21c1f2, type: 3}
   m_PrefabInstance: {fileID: 1643132467}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &170190913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5974452228597259211, guid: 970938a421fcc4f4595551f09a21c1f2, type: 3}
+  m_PrefabInstance: {fileID: 1643132467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e321f875c4c8e4ca61883a39899bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &246351103
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +205,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &339336179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4537304918221498710, guid: 85b8964eb31acdd4cbf1234378437d33, type: 3}
+  m_PrefabInstance: {fileID: 2569894884569305678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &401287611
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +250,14 @@ MonoBehaviour:
   feedback: 
   lives: 10
   streak: 0
+  isGivingFeedback: 0
+  dialogue: {fileID: 0}
+  userInput: {fileID: 0}
+  nextQuackButton: {fileID: 0}
+  submitButton: {fileID: 0}
+  healthBar: {fileID: 0}
+  gameOverImage: {fileID: 0}
+  gameState: 0
 --- !u!4 &401287613
 Transform:
   m_ObjectHideFlags: 0
@@ -242,6 +272,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &454816482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6950666637200689100, guid: 38000ce316cdea247bcffde84508043a, type: 3}
+  m_PrefabInstance: {fileID: 6950666635725190007}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35003caa72c1e614baf46569018645e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &892429563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4537304918024693996, guid: 85b8964eb31acdd4cbf1234378437d33, type: 3}
@@ -259,8 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84eed66c3a6a1b645bf7402ac81eaea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStateManager: {fileID: 0}
-  buttonText: {fileID: 0}
+  buttonText: {fileID: 339336179}
+  timer: {fileID: 454816482}
 --- !u!1 &1215576576
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +489,23 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1526758526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 834828396795691992, guid: d5a26dd58bbc64149b24870cb533da12, type: 3}
+  m_PrefabInstance: {fileID: 7564616282120925024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1526758532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526758526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c464a55b499cc4a9c2785d1cbd5cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1643132467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -815,9 +873,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6950666637200689099, guid: 38000ce316cdea247bcffde84508043a, type: 3}
+      propertyPath: textWriter
+      value: 
+      objectReference: {fileID: 1526758532}
+    - target: {fileID: 6950666637200689099, guid: 38000ce316cdea247bcffde84508043a, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 401287612}
+    - target: {fileID: 6950666637200689100, guid: 38000ce316cdea247bcffde84508043a, type: 3}
+      propertyPath: keyboardMixer
+      value: 
+      objectReference: {fileID: 170190913}
     - target: {fileID: 6950666637200689101, guid: 38000ce316cdea247bcffde84508043a, type: 3}
       propertyPath: m_Name
       value: GameStateManager

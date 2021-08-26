@@ -371,7 +371,7 @@ MonoBehaviour:
   audioSource: {fileID: 140867541}
   correct: {fileID: 8300000, guid: 080cd3dd4a9a6ad43ae884d5342e00b3, type: 3}
   wrong: {fileID: 8300000, guid: d4c32761c713f9d4683c2f0c8a398038, type: 3}
-  enabled: 0
+  isEnabled: 0
 --- !u!82 &140867541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -631,6 +631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   keyboardMixer: {fileID: 140867540}
+  countTime: 310
 --- !u!1 &334084187
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +790,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412770171}
   m_CullTransparentMesh: 1
+--- !u!1 &423838305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 834828394949693717, guid: d5a26dd58bbc64149b24870cb533da12, type: 3}
+  m_PrefabInstance: {fileID: 1436319188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &423838308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423838305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c464a55b499cc4a9c2785d1cbd5cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timePerCharacter: 0
 --- !u!1 &499597641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1352,10 @@ MonoBehaviour:
   noHealthHandle: {fileID: 21300000, guid: d2a01d75cafe1594bb99c02d0f450fb4, type: 3}
   gameOverImage: {fileID: 830351465}
   bossVoice: {fileID: 1426130974}
-  gameState: 0
+  timer: {fileID: 141003937}
+  textWriter: {fileID: 423838308}
+  previousState: 0
+  gameState: 1
 --- !u!4 &820073047
 Transform:
   m_ObjectHideFlags: 0
@@ -2298,7 +2320,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 834828394949693719, guid: d5a26dd58bbc64149b24870cb533da12, type: 3}
   m_PrefabInstance: {fileID: 1436319188}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 423838305}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
