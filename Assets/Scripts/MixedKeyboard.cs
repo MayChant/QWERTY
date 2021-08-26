@@ -11,17 +11,22 @@ public class MixedKeyboard : ScriptableObject
     public Dictionary<char, char> charMap;
     [SerializeField]
     public string keyMapDoc;
+    private bool initialized;
     
     public void OnEnable()
     {
-        Debug.Log("###Creating new mixed keyboard");
-        keyMapDoc = "Key,Letter\n";
-        charMap = new Dictionary<char, char>();
-        char[] randomLetters = letters.OrderBy(x => Random.value).ToArray();
-        for (int i = 0; i < letters.Length; i++)
+        if (!initialized)
         {
-            charMap[letters[i]] = randomLetters[i];
-            keyMapDoc += string.Format("{0},{1}\n", letters[i], randomLetters[i]);
+            Debug.Log("###Creating new mixed keyboard");
+            keyMapDoc = "Key,Letter\n";
+            charMap = new Dictionary<char, char>();
+            char[] randomLetters = letters.OrderBy(x => Random.value).ToArray();
+            for (int i = 0; i < letters.Length; i++)
+            {
+                charMap[letters[i]] = randomLetters[i];
+                keyMapDoc += string.Format("{0},{1}\n", letters[i], randomLetters[i]);
+            }
+            initialized = true;
         }
     }
 }

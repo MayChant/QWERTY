@@ -15,12 +15,18 @@ public class GameManager : MonoBehaviour
     public int lives;
     public int streak;
     public bool isGivingFeedback;
+    public KeyboardMixer keyboard;
     public Text dialogue;
     public Text userInput;
     public Button nextQuackButton;
     public Button submitButton;
-    public GameObject healthBar;
+    public Slider healthBarSlider;
+    public Image healthBarHandle;
+    public Sprite fullHealthHandle;
+    public Sprite halfHealthHandle;
+    public Sprite noHealthHandle;
     public Image gameOverImage;
+    public BossVoice bossVoice;
     public enum GameState
     {
         Intro,
@@ -45,9 +51,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
         currentQuack = quacks[quackIndex];
-        lives = 10;
+        lives = 12;
         gameState = GameState.Quack;
-        healthBar.GetComponent<Slider>().value = lives;
+        healthBarSlider.value = lives;
+        healthBarHandle.sprite = fullHealthHandle;
     }
 
     // Update is called once per frame
@@ -60,6 +67,7 @@ public class GameManager : MonoBehaviour
                 nextQuackButton.gameObject.SetActive(true);
                 submitButton.gameObject.SetActive(false);
                 gameOverImage.gameObject.SetActive(false);
+                keyboard.isEnabled = false;
 
                 break;
             case GameState.Quack:
@@ -67,16 +75,19 @@ public class GameManager : MonoBehaviour
                 nextQuackButton.gameObject.SetActive(false);
                 submitButton.gameObject.SetActive(true);
                 gameOverImage.gameObject.SetActive(false);
+                keyboard.isEnabled = true;
 
                 break;
             case GameState.GameOver:
                 gameOverImage.gameObject.SetActive(true);
+                keyboard.isEnabled = false;
 
                 break;
             default:
                 dialogue.text = "this is a default dialogue.".ToUpper();
                 nextQuackButton.gameObject.SetActive(false);
                 gameOverImage.gameObject.SetActive(false);
+                keyboard.isEnabled = false;
                 break;
         }
     }
@@ -87,6 +98,7 @@ public class GameManager : MonoBehaviour
         userInput.text = "";
         quackIndex = (quackIndex + 1) % quacks.Length;
         currentQuack = quacks[quackIndex];
+        bossVoice.PlayRandom();
     }
 
     public void ProcessSubmission(int errorCount)
@@ -98,26 +110,50 @@ public class GameManager : MonoBehaviour
             {
                 lives = Mathf.Min(lives + 1, 10);
             }
+            bossVoice.PlayGoodJob();
+        }
+        else
+        {
+            bossVoice.PlayRandom();
         }
         //lives -= errorCount;
         if ((lives -= errorCount) > 0)
         {
-            healthBar.GetComponent<Slider>().value = lives;
+            healthBarSlider.value = lives;
             gameState = GameState.FeedBack;
             lives -= errorCount;
         }
-        else if((lives -= errorCount) <= 0)
+        else if ((lives -= errorCount) <= 0)
         {
-            gameState = GameState.GameOver;    
+            gameState = GameState.GameOver;
         }
-        
+        RenderHealthBarHandle();
     }
-    public void StartOver()
+
+    private void RenderHealthBarHandle()
+    {
+        if (lives > 8)
+        {
+            healthBarHandle.sprite = fullHealthHandle;
+        }
+        else if (lives > 4)
+        {
+            healthBarHandle.sprite = halfHealthHandle;
+        }
+        else
+        {
+            healthBarHandle.sprite = noHealthHandle;
+        }
+    }
+
+    public void Initialize()
     {
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
         currentQuack = quacks[quackIndex];
-        lives = 10;
+        lives = 12;
         gameState = GameState.Quack;
-        healthBar.GetComponent<Slider>().value = lives;
+        healthBarSlider.value = lives;
+        healthBarHandle.sprite = fullHealthHandle;
+        keyboard.RemixKeyboard();
     }
 }
