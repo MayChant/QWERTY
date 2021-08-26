@@ -15,11 +15,11 @@ E:/game_jam_20210822
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-6135
-Successfully changed project path to: E:/game_jam_20210822
-E:/game_jam_20210822
+61467
+Successfully changed project path to: C:/Users/Lenovo/Documents/Games/Keyboard Warrior
+C:/Users/Lenovo/Documents/Games/Keyboard Warrior
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 28.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 83.95 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.14f1 (d0d1bb862f9d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Resources/UnitySubsystems
@@ -32,92 +32,95 @@ Direct3D:
     VRAM:     10077 MB
     Driver:   27.21.14.6079
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
+Mono path[0] = 'C:/Program Files/Unity/2020.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/2020.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/2020.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56212
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001414 seconds.
+Register platform support module: C:/Program Files/Unity/2020.3.14f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/2020.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004937 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 28.28 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 73.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.731 seconds
+- Completed reload, in  4.657 seconds
 Domain Reload Profiling:
-	ReloadAssembly (732ms)
-		BeginReloadAssembly (38ms)
+	ReloadAssembly (4657ms)
+		BeginReloadAssembly (154ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (273ms)
-			LoadAssemblies (36ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (800ms)
+			LoadAssemblies (146ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (95ms)
+			SetupTypeCache (299ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (19ms)
-			SetupLoadedEditorAssemblies (112ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (305ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (28ms)
-				BeforeProcessingInitializeOnLoad (5ms)
-				ProcessInitializeOnLoadAttributes (57ms)
-				ProcessInitializeOnLoadMethodAttributes (19ms)
+				RefreshPlugins (73ms)
+				BeforeProcessingInitializeOnLoad (24ms)
+				ProcessInitializeOnLoadAttributes (144ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001344 seconds.
+Registered in 0.006649 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 27.10 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 70.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.716 seconds
+- Completed reload, in  2.377 seconds
 Domain Reload Profiling:
-	ReloadAssembly (716ms)
-		BeginReloadAssembly (96ms)
+	ReloadAssembly (2379ms)
+		BeginReloadAssembly (276ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (578ms)
-			LoadAssemblies (59ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (1985ms)
+			LoadAssemblies (179ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (179ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (232ms)
+			SetupTypeCache (501ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (194ms)
+			SetupLoadedEditorAssemblies (856ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (27ms)
-				BeforeProcessingInitializeOnLoad (43ms)
-				ProcessInitializeOnLoadAttributes (145ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				RefreshPlugins (70ms)
+				BeforeProcessingInitializeOnLoad (180ms)
+				ProcessInitializeOnLoadAttributes (542ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (15ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
+Refreshing native plugins compatible for Editor in 0.99 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2111 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.4 MB.
+Unloading 2110 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
 System memory in use after: 95.5 MB.
 
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2553.
-Total: 1.866700 ms (FindLiveObjects: 0.165000 ms CreateObjectMapping: 0.054700 ms MarkObjects: 1.594600 ms  DeleteObjects: 0.051400 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2547.
+Total: 9.700100 ms (FindLiveObjects: 0.454300 ms CreateObjectMapping: 0.194500 ms MarkObjects: 8.034900 ms  DeleteObjects: 1.012300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,17 +134,26 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefab/GameStateManager.prefab
-  artifactKey: Guid(38000ce316cdea247bcffde84508043a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/GameStateManager.prefab using Guid(38000ce316cdea247bcffde84508043a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9638ed9d89f1f12db17f7e138accda0') in 0.031410 seconds 
-  Import took 0.034139 seconds .
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 2.asset
+  artifactKey: Guid(059dba4fc284fa047b4a5f196b8d944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 2.asset using Guid(059dba4fc284fa047b4a5f196b8d944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '1622908fad1eb9b69ad3ba8e90727186') in 0.128171 seconds 
+  Import took 0.137601 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Prefab/Input.prefab
-  artifactKey: Guid(970938a421fcc4f4595551f09a21c1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Input.prefab using Guid(970938a421fcc4f4595551f09a21c1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+  Time since last request: 0.001045 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 12.asset
+  artifactKey: Guid(926fd18996ca1264b9b60a5f7a7f954a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 12.asset using Guid(926fd18996ca1264b9b60a5f7a7f954a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -150,7 +162,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: 'a48a009aa76b7f431885e2bc32f91c89') in 0.016650 seconds 
+  Import took 0.029584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 18.asset
+  artifactKey: Guid(bebe23786d038fd4e8dbc85096d1d0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 18.asset using Guid(bebe23786d038fd4e8dbc85096d1d0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -159,7 +179,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: '0fdd1f110eb83b90d484534445415177') in 0.010899 seconds 
+  Import took 0.022770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 16.asset
+  artifactKey: Guid(bc06842d47904af4f86b8dbb7783e106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 16.asset using Guid(bc06842d47904af4f86b8dbb7783e106) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -168,7 +196,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: 'daf6be78764fadecbe7b437488a8ca07') in 0.010541 seconds 
+  Import took 0.037043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000897 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 14.asset
+  artifactKey: Guid(2e7f9e2e2d293b940bb94940d327418b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 14.asset using Guid(2e7f9e2e2d293b940bb94940d327418b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -177,7 +213,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: 'cc2ddc408dd5f86b855e0748730ebe74') in 0.029488 seconds 
+  Import took 0.109685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 1.asset
+  artifactKey: Guid(d996c323430b13545a573902d8676bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 1.asset using Guid(d996c323430b13545a573902d8676bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -186,7 +230,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: 'b1c6b1be681c9eb823a11c402f31b51c') in 0.033546 seconds 
+  Import took 0.165671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000747 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 7.asset
+  artifactKey: Guid(4edd0f15b1509574d9088ffad6679600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 7.asset using Guid(4edd0f15b1509574d9088ffad6679600) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -195,7 +247,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: '889a5300e5bdab167157a0a55ee74283') in 0.009396 seconds 
+  Import took 0.018158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 6.asset
+  artifactKey: Guid(892cfb344dbdffd40a8b334a08311f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 6.asset using Guid(892cfb344dbdffd40a8b334a08311f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -204,7 +264,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: 'ba83bc674644d6350026186ee0dcc7f0') in 0.007832 seconds 
+  Import took 0.012907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 11.asset
+  artifactKey: Guid(1c2a4fe9cc43efa4bbc8264c451fd879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 11.asset using Guid(1c2a4fe9cc43efa4bbc8264c451fd879) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -213,7 +281,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: '1986c907d30bde8b3f5bfeed4602e27a') in 0.005323 seconds 
+  Import took 0.009917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 10.asset
+  artifactKey: Guid(567a57bc6fa517547996aa95f840aac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 10.asset using Guid(567a57bc6fa517547996aa95f840aac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -222,7 +298,15 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
-###Creating new mixed keyboard
+ -> (artifact id: '79baab4616f92ce7c481bd9d58094a0b') in 0.006437 seconds 
+  Import took 0.011516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 4.asset
+  artifactKey: Guid(10bd491c960d83243a0b03f13fb09661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 4.asset using Guid(10bd491c960d83243a0b03f13fb09661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -231,54 +315,675 @@ MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
 
 (Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
 
- -> (artifact id: '49c76b2c0320f33fa5468d78380958d3') in 0.017103 seconds 
-  Import took 0.019410 seconds .
+ -> (artifact id: 'deac93b4b07d6ad595a61fcd12bba68a') in 0.005973 seconds 
+  Import took 0.010830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 13.asset
+  artifactKey: Guid(831f886513ef0c84eb27d211c83708bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 13.asset using Guid(831f886513ef0c84eb27d211c83708bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'fefbae7e464f3e58403d4e527c54b9a4') in 0.005160 seconds 
+  Import took 0.010272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 8.asset
+  artifactKey: Guid(6b0acb064d20083478e22fcd6a487634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 8.asset using Guid(6b0acb064d20083478e22fcd6a487634) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'e1bfce0966edb60816f32e828ae98897') in 0.008419 seconds 
+  Import took 0.016040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 22.asset
+  artifactKey: Guid(7ff9381a9caed6a4ab3759fae4fb1489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 22.asset using Guid(7ff9381a9caed6a4ab3759fae4fb1489) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '9856b9b8c8e13d01e13824ca69ef68fa') in 0.010806 seconds 
+  Import took 0.023030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000816 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 21.asset
+  artifactKey: Guid(5a2d51d29abaab749b5ca6cc26c85eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 21.asset using Guid(5a2d51d29abaab749b5ca6cc26c85eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '728a7744d191c4c5c0e1e0265decf6a6') in 0.008955 seconds 
+  Import took 0.015675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000448 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 3.asset
+  artifactKey: Guid(f03358e8dcf4c6943a866a91142536a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 3.asset using Guid(f03358e8dcf4c6943a866a91142536a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '3da26a1bd6623503837606672e6921c1') in 0.020433 seconds 
+  Import took 0.026944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 9.asset
+  artifactKey: Guid(2ed7253713f577d44b5056cfb59a62cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 9.asset using Guid(2ed7253713f577d44b5056cfb59a62cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '6353f64c3cc1cdc1c1f0bbb2eca359e3') in 0.019169 seconds 
+  Import took 0.032773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001329 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 15.asset
+  artifactKey: Guid(40967ce81fa1abe42b96f6048aee6d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 15.asset using Guid(40967ce81fa1abe42b96f6048aee6d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'b258fd5c1b5b6f61509bf82841442d98') in 0.008513 seconds 
+  Import took 0.024193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 5.asset
+  artifactKey: Guid(9450e1c7857909846b5b91fc3498416e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 5.asset using Guid(9450e1c7857909846b5b91fc3498416e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '3e98ef12c1923bc051077b0d41e2e049') in 0.016189 seconds 
+  Import took 0.031457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001553 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 17.asset
+  artifactKey: Guid(6d96862d9c755574cb7c4d7d8e88d92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 17.asset using Guid(6d96862d9c755574cb7c4d7d8e88d92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'dfd4c3f32929030518d3cf5e4d2b9896') in 0.049432 seconds 
+  Import took 0.058932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 19.asset
+  artifactKey: Guid(5d902d684e67f48499d2fde3bd6a0df0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 19.asset using Guid(5d902d684e67f48499d2fde3bd6a0df0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '86679570ccbb47456eccd7dcbb43ed1b') in 0.017654 seconds 
+  Import took 0.036935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000778 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 20.asset
+  artifactKey: Guid(92ef6529a4072074e9ec32a272945e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 20.asset using Guid(92ef6529a4072074e9ec32a272945e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'a5356a26fc0af71bf810990ef94858ae') in 0.028892 seconds 
+  Import took 0.051981 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001426 seconds.
+Registered in 0.017993 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.649 seconds
+- Completed reload, in  3.727 seconds
 Domain Reload Profiling:
-	ReloadAssembly (649ms)
-		BeginReloadAssembly (84ms)
+	ReloadAssembly (3728ms)
+		BeginReloadAssembly (365ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (27ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (523ms)
-			LoadAssemblies (63ms)
+			CreateAndSetChildDomain (125ms)
+		EndReloadAssembly (3128ms)
+			LoadAssemblies (324ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (176ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (195ms)
+			SetupTypeCache (1042ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (190ms)
+			SetupLoadedEditorAssemblies (1173ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (37ms)
-				ProcessInitializeOnLoadAttributes (144ms)
-				ProcessInitializeOnLoadMethodAttributes (4ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (372ms)
+				ProcessInitializeOnLoadAttributes (727ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (32ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (39ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2092 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.4 MB.
+System memory in use after: 94.4 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2551.
+Total: 5.619300 ms (FindLiveObjects: 0.365900 ms CreateObjectMapping: 0.147200 ms MarkObjects: 4.856700 ms  DeleteObjects: 0.246600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.067537 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 4.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in 23.704 seconds
+Domain Reload Profiling:
+	ReloadAssembly (23708ms)
+		BeginReloadAssembly (1661ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (137ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (767ms)
+		EndReloadAssembly (21618ms)
+			LoadAssemblies (710ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (5246ms)
+			ReleaseScriptCaches (20ms)
+			RebuildScriptCaches (2220ms)
+			SetupLoadedEditorAssemblies (6660ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (170ms)
+				SetLoadedEditorAssemblies (6ms)
+				RefreshPlugins (8ms)
+				BeforeProcessingInitializeOnLoad (3753ms)
+				ProcessInitializeOnLoadAttributes (2672ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (26ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2092 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.4 MB.
+System memory in use after: 94.4 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2555.
+Total: 7.211200 ms (FindLiveObjects: 0.678400 ms CreateObjectMapping: 0.242800 ms MarkObjects: 6.003800 ms  DeleteObjects: 0.282700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 746.023822 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 28.asset
+  artifactKey: Guid(a509d27edaff9574089a112e288738e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 28.asset using Guid(a509d27edaff9574089a112e288738e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'af59e77f5e5eb5a5128b210ad999531f') in 0.047680 seconds 
+  Import took 0.057435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000803 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 26.asset
+  artifactKey: Guid(d6e67a8b151fb4248a1347e5903d071d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 26.asset using Guid(d6e67a8b151fb4248a1347e5903d071d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '47793f3dbd759a673b214c231977533b') in 0.246700 seconds 
+  Import took 0.341307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008888 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 24.asset
+  artifactKey: Guid(59018fa32c5e2d34d84f1b243791ff79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 24.asset using Guid(59018fa32c5e2d34d84f1b243791ff79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: '6d56c906e150391314828ca54df03f48') in 0.031079 seconds 
+  Import took 0.149200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.082949 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 27.asset
+  artifactKey: Guid(748a8d8dbfa703243809000e80bffa5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 27.asset using Guid(748a8d8dbfa703243809000e80bffa5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'd1742ae230de028478c2bc5727482dd9') in 0.174690 seconds 
+  Import took 0.200735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000768 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 29.asset
+  artifactKey: Guid(86415ded8e3ce9c4bb2d7d8d7b38f5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 29.asset using Guid(86415ded8e3ce9c4bb2d7d8d7b38f5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'a462540d222d9d2aa182029a295f3e26') in 0.013864 seconds 
+  Import took 0.024053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001168 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 23.asset
+  artifactKey: Guid(13d76dbf9e3577b44805cf165e3a8bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 23.asset using Guid(13d76dbf9e3577b44805cf165e3a8bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'ebdd86cf85ad7b218d8ede2a5ee0bcc6') in 0.028142 seconds 
+  Import took 0.039192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000518 seconds.
+  path: Assets/Scripts/Mixed Keyboards/Mixed Keyboard 25.asset
+  artifactKey: Guid(965cc57f1fe4d92409371d1e4647a852) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Mixed Keyboards/Mixed Keyboard 25.asset using Guid(965cc57f1fe4d92409371d1e4647a852) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ###Creating new mixed keyboard
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MixedKeyboard:OnEnable () (at Assets/Scripts/MixedKeyboard.cs:20)
+
+(Filename: Assets/Scripts/MixedKeyboard.cs Line: 20)
+
+ -> (artifact id: 'd3aee81510c0cc9a22b9953c64b1abdd') in 0.043922 seconds 
+  Import took 0.070819 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.024191 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.856 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3857ms)
+		BeginReloadAssembly (351ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (21ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (83ms)
+		EndReloadAssembly (3278ms)
+			LoadAssemblies (331ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (998ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (213ms)
+			SetupLoadedEditorAssemblies (1271ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (30ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (394ms)
+				ProcessInitializeOnLoadAttributes (793ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
+				AfterProcessingInitializeOnLoad (26ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (38ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2092 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.5 MB.
+System memory in use after: 94.4 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2559.
+Total: 26.155600 ms (FindLiveObjects: 20.041300 ms CreateObjectMapping: 0.289500 ms MarkObjects: 5.582900 ms  DeleteObjects: 0.238500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 1.116232 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 6.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in 28.570 seconds
+Domain Reload Profiling:
+	ReloadAssembly (28582ms)
+		BeginReloadAssembly (3106ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (219ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (858ms)
+		EndReloadAssembly (23090ms)
+			LoadAssemblies (3189ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (6486ms)
+			ReleaseScriptCaches (16ms)
+			RebuildScriptCaches (1263ms)
+			SetupLoadedEditorAssemblies (9829ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (247ms)
+				SetLoadedEditorAssemblies (14ms)
+				RefreshPlugins (7ms)
+				BeforeProcessingInitializeOnLoad (3075ms)
+				ProcessInitializeOnLoadAttributes (6127ms)
+				ProcessInitializeOnLoadMethodAttributes (140ms)
+				AfterProcessingInitializeOnLoad (217ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (240ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2092 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.5 MB.
+System memory in use after: 94.5 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2563.
+Total: 19.348900 ms (FindLiveObjects: 0.848600 ms CreateObjectMapping: 0.420400 ms MarkObjects: 17.496700 ms  DeleteObjects: 0.578500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 204.473860 seconds.
+  path: Assets/Scripts/Timer.cs
+  artifactKey: Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Timer.cs using Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c65d997e479751217ce2210b68ec2d') in 0.027067 seconds 
+  Import took 0.034611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048789 seconds.
+  path: Assets/Scripts/Timer.cs
+  artifactKey: Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Timer.cs using Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c65d997e479751217ce2210b68ec2d') in 0.012297 seconds 
+  Import took 0.020595 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019966 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.852 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1853ms)
+		BeginReloadAssembly (201ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (22ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (1543ms)
+			LoadAssemblies (164ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (496ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (85ms)
+			SetupLoadedEditorAssemblies (616ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (177ms)
+				ProcessInitializeOnLoadAttributes (403ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2088 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.8 MB.
-System memory in use after: 93.9 MB.
+Unloading 2092 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.5 MB.
+System memory in use after: 94.5 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2557.
-Total: 1.811800 ms (FindLiveObjects: 0.129600 ms CreateObjectMapping: 0.039400 ms MarkObjects: 1.628700 ms  DeleteObjects: 0.013400 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2567.
+Total: 3.393100 ms (FindLiveObjects: 0.226600 ms CreateObjectMapping: 0.100200 ms MarkObjects: 2.908300 ms  DeleteObjects: 0.156600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 28.218775 seconds.
+  path: Assets/Scripts/Timer.cs
+  artifactKey: Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Timer.cs using Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec182df3d5e06fe67ba304cafa3cef18') in 0.009524 seconds 
+  Import took 0.014605 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.020544 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.663 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5664ms)
+		BeginReloadAssembly (882ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (21ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (122ms)
+		EndReloadAssembly (4292ms)
+			LoadAssemblies (882ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1198ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (183ms)
+			SetupLoadedEditorAssemblies (1747ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (32ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (418ms)
+				ProcessInitializeOnLoadAttributes (1255ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (21ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2092 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.5 MB.
+System memory in use after: 94.5 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2571.
+Total: 7.347800 ms (FindLiveObjects: 0.459200 ms CreateObjectMapping: 0.150800 ms MarkObjects: 6.570400 ms  DeleteObjects: 0.164900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -290,4 +995,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 111.063673 seconds.
+  path: Assets/Scripts/Timer.cs
+  artifactKey: Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Timer.cs using Guid(35003caa72c1e614baf46569018645e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5546dbc591fe755f267e9a5a6add14') in 0.012792 seconds 
+  Import took 0.020319 seconds .
+
