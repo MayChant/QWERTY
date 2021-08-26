@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         currentQuack = quacks[quackIndex];
         lives = 12;
         gameState = GameState.Quack;
+        bossVoice.PlayRandom();
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
     }
@@ -69,10 +70,9 @@ public class GameManager : MonoBehaviour
             case GameState.FeedBack:
                 if(previousState != GameState.FeedBack)
                 {
-                    textWriter.AddTextToWrite(dialogue, feedback.ToUpper(), .05f);
+                    textWriter.AddTextToWrite(dialogue, feedback.ToUpper(), .02f);
                     previousState = GameState.FeedBack;
                 }
-                //dialogue.text = feedback.ToUpper();
                 nextQuackButton.gameObject.SetActive(true);
                 submitButton.gameObject.SetActive(false);
                 gameOverImage.gameObject.SetActive(false);
@@ -82,10 +82,9 @@ public class GameManager : MonoBehaviour
             case GameState.Quack:
                 if(previousState != GameState.Quack)
                 {
-                    textWriter.AddTextToWrite(dialogue, currentQuack.ToUpper(), .05f);
+                    textWriter.AddTextToWrite(dialogue, currentQuack.ToUpper(), .02f);
                     previousState = GameState.Quack;
                 }
-                //dialogue.text = currentQuack.ToUpper();
                 nextQuackButton.gameObject.SetActive(false);
                 submitButton.gameObject.SetActive(true);
                 gameOverImage.gameObject.SetActive(false);
@@ -110,10 +109,10 @@ public class GameManager : MonoBehaviour
     {
         previousState = gameState;
         gameState = GameState.Quack;
+        bossVoice.PlayRandom();
         userInput.text = "";
         quackIndex = (quackIndex + 1) % quacks.Length;
         currentQuack = quacks[quackIndex];
-        bossVoice.PlayRandom();
     }
 
     public void ProcessSubmission(int errorCount)
@@ -169,6 +168,7 @@ public class GameManager : MonoBehaviour
         currentQuack = quacks[quackIndex];
         lives = 12;
         gameState = GameState.Quack;
+        bossVoice.PlayRandom();
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
         keyboard.RemixKeyboard();

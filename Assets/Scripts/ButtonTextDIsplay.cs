@@ -15,8 +15,9 @@ public class ButtonTextDisplay : MonoBehaviour
         gameManager = GameManager.instance;
     }
     // Update is called once per frame
-    void DisplayInMinutes(float timeToDisplay){
-        if(timeToDisplay < 0)
+    void DisplayInMinutes(float timeToDisplay)
+    {
+        if (timeToDisplay < 0)
         {
             timeToDisplay = 0;
         }
@@ -26,15 +27,15 @@ public class ButtonTextDisplay : MonoBehaviour
     }
     void Update()
     {
-        if(gameManager.gameState != GameManager.GameState.Quack)
+        if (gameManager.gameState != GameManager.GameState.Quack)
         {
-            
+
             buttonText.text = "QUACK";
         }
         else
         {
             DisplayInMinutes(timer.time);
         }
-        
+
     }
 }
