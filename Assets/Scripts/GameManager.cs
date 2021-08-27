@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Quack;
         bossVoice.PlayRandom();
         userInput.text = "";
+        keyboard.RemixKeyboard();
         quackIndex = (quackIndex + 1) % quacks.Length;
         currentQuack = quacks[quackIndex];
         textWriter.AddTextToWrite(dialogue, currentQuack.ToUpper(), .02f);
@@ -141,7 +142,7 @@ public class GameManager : MonoBehaviour
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
         keyboard.RemixKeyboard();
-        timer.countTime = 310;
+        timer.countTime = timer.initialCountTime;
         timer.time = timer.countTime;
         gameOverImage.gameObject.SetActive(false);
         bgm.Play();
