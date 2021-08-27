@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public Image gameOverImage;
     public BossVoice bossVoice;
     public Timer timer;
+    public AudioSource bgm;
     [SerializeField] private TextWriter textWriter;
     public enum GameState
     {
@@ -39,7 +40,6 @@ public class GameManager : MonoBehaviour
         GameOver,
         Endless,
     }
-    public GameState previousState;
     public GameState gameState;
     // Start is called before the first frame update
     void Awake()
@@ -54,65 +54,39 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
-        currentQuack = quacks[quackIndex];
+        quackIndex = -1;
         lives = 12;
         gameState = GameState.Quack;
         bossVoice.PlayRandom();
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
+        ToNextQuack();
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (gameState)
+        if (gameOverImage.gameObject.activeSelf)
         {
-            case GameState.FeedBack:
-                if(previousState != GameState.FeedBack)
-                {
-                    textWriter.AddTextToWrite(dialogue, feedback.ToUpper(), .02f);
-                    previousState = GameState.FeedBack;
-                }
-                nextQuackButton.gameObject.SetActive(true);
-                submitButton.gameObject.SetActive(false);
-                gameOverImage.gameObject.SetActive(false);
-                keyboard.isEnabled = false;
-
-                break;
-            case GameState.Quack:
-                if(previousState != GameState.Quack)
-                {
-                    textWriter.AddTextToWrite(dialogue, currentQuack.ToUpper(), .02f);
-                    previousState = GameState.Quack;
-                }
-                nextQuackButton.gameObject.SetActive(false);
-                submitButton.gameObject.SetActive(true);
-                gameOverImage.gameObject.SetActive(false);
-                keyboard.isEnabled = true;
-
-                break;
-            case GameState.GameOver:
-                gameOverImage.gameObject.SetActive(true);
-                keyboard.isEnabled = false;
-
-                break;
-            default:
-                dialogue.text = "this is a default dialogue.".ToUpper();
-                nextQuackButton.gameObject.SetActive(false);
-                gameOverImage.gameObject.SetActive(false);
-                keyboard.isEnabled = false;
-                break;
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                Initialize();
+            }
         }
     }
 
     public void ToNextQuack()
     {
-        previousState = gameState;
         gameState = GameState.Quack;
         bossVoice.PlayRandom();
         userInput.text = "";
         quackIndex = (quackIndex + 1) % quacks.Length;
         currentQuack = quacks[quackIndex];
+        textWriter.AddTextToWrite(dialogue, currentQuack.ToUpper(), .02f);
+        nextQuackButton.gameObject.SetActive(false);
+        submitButton.gameObject.SetActive(true);
+        gameOverImage.gameObject.SetActive(false);
+        keyboard.isEnabled = true;
     }
 
     public void ProcessSubmission(int errorCount)
@@ -130,18 +104,15 @@ public class GameManager : MonoBehaviour
         {
             bossVoice.PlayRandom();
         }
-        //lives -= errorCount;
         if ((lives -= errorCount) > 0)
         {
-            previousState = gameState;
             healthBarSlider.value = lives;
-            gameState = GameState.FeedBack;
             lives -= errorCount;
+            ToFeedback();
         }
         else if ((lives -= errorCount) <= 0)
         {
-            previousState = gameState;
-            gameState = GameState.GameOver;
+            ToGameOver();
         }
         RenderHealthBarHandle();
     }
@@ -165,14 +136,32 @@ public class GameManager : MonoBehaviour
     public void Initialize()
     {
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
-        currentQuack = quacks[quackIndex];
+        quackIndex = -1;
         lives = 12;
-        gameState = GameState.Quack;
-        bossVoice.PlayRandom();
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
         keyboard.RemixKeyboard();
         timer.countTime = 310;
-        
+        timer.time = timer.countTime;
+        gameOverImage.gameObject.SetActive(false);
+        bgm.Play();
+        ToNextQuack();
+    }
+
+    public void ToFeedback()
+    {
+        gameState = GameState.FeedBack;
+        textWriter.AddTextToWrite(dialogue, feedback.ToUpper(), .02f);
+        nextQuackButton.gameObject.SetActive(true);
+        submitButton.gameObject.SetActive(false);
+        gameOverImage.gameObject.SetActive(false);
+        keyboard.isEnabled = false;
+    }
+
+    public void ToGameOver()
+    {
+        gameOverImage.gameObject.SetActive(true);
+        bgm.Stop();
+        keyboard.isEnabled = false;
     }
 }
