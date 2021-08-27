@@ -23,6 +23,7 @@ public class BossVoice : MonoBehaviour
     {
         audioSource.clip = lines[Random.Range(0, lines.Length)];
         audioSource.Play();
+        Debug.Log("Played random boss line");
     }
 
     public void PlayGoodJob()
