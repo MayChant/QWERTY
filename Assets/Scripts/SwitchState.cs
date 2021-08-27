@@ -9,15 +9,17 @@ public class SwitchState : MonoBehaviour
     public GameManager gameManager;
     public TextWriter textWriter;
     public QuackCollection introCollection;
+    public QuackCollection endingCollection;
      private string[] intro;
     public Button startButton;
     public Text dialogue;
     public Text playerDialogue;
     public string currentIntro;
-    public int quackIndex = 0;
+    public int quackCount = 0;
+    public int introIndex = 0;
     private void Awake() {
-        intro = introCollection.collection.ToArray();
-        currentIntro = quacks[quackIndex];
+        intro = introCollection.collection;
+        currentIntro = intro[introIndex];
        
     }
     void Start()
@@ -25,23 +27,36 @@ public class SwitchState : MonoBehaviour
         gameManager = GameManager.instance;
         if(gameManager.gameState == GameManager.GameState.Intro)
         {
-            
-            textWriter.AddTextToWrite(dialogue.text, currentIntro, 0.02f);
+
+            textWriter.AddTextToWrite(dialogue, currentIntro, 0.02f);
         }
     }
-    public void NextIntroDialogue()
+    public void NextDialogue()
     {
-        quackIndex += 1;
-        currentIntro = quacks[quackIndex];
-        if(gameManager.gameState == GameManager.GameState.Intro)
-        {
-            textWriter.AddTextToWrite(dialogue.text, currentIntro, 0.02f);
+        switch(gameManager.gameState){
+            case GameManager.GameState.Intro:
+                if((introIndex + 1) >= intro.Length)
+                {
+                    gameManager.gameState = GameManager.GameState.Quack;
+                    gameManager.ToNextQuack();
+                    startButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    introIndex += 1;
+                    currentIntro = intro[introIndex];
+                    if(gameManager.gameState == GameManager.GameState.Intro)
+                    {
+                        textWriter.AddTextToWrite(dialogue, currentIntro, 0.02f);
+                    }       
+                
+                }
+                break;
         }
-        if((quackIndex + 1) > intro.Length)
-        {
-            gameManager.gameState = GameManager.GameState.Quack;
-        }
+        
+        
     }
+
 
     //a function that display next dialog
     //if is the end, change game state
