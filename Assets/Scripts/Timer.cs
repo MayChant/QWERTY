@@ -9,8 +9,10 @@ public class Timer : MonoBehaviour
     public KeyboardMixer keyboardMixer;
     private GameManager gameManager;
     public int countTime;
+    public int initialCountTime;
     void Start(){
         gameManager = GameManager.instance;
+        countTime = initialCountTime;
         time = countTime;
     }
     private void OnEnable() {
