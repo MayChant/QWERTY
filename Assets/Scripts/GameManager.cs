@@ -9,9 +9,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public QuackCollection quackCollection;
+    public QuackCollection introCollection;
     private string[] quacks;
+    private string[] intro;
     private int quackIndex;
+    private int introIndex = 0;
     public string currentQuack;
+    public string currentIntro;
     public string feedback;
     public int lives;
     public int streak;
@@ -21,6 +25,7 @@ public class GameManager : MonoBehaviour
     public Text userInput;
     public Button nextQuackButton;
     public Button submitButton;
+    public Button dialogueButton;
     public Slider healthBarSlider;
     public Image healthBarHandle;
     public Sprite fullHealthHandle;
@@ -56,13 +61,20 @@ public class GameManager : MonoBehaviour
         quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
         quackIndex = -1;
         lives = 12;
-        gameState = GameState.Quack;
+        gameState = GameState.Intro;
         bossVoice.PlayRandom();
         healthBarSlider.value = lives;
         healthBarHandle.sprite = fullHealthHandle;
-        ToNextQuack();
+        intro = introCollection.collection;
+        currentIntro = intro[introIndex];
+        //ToNextQuack();
     }
-
+    private void Start() {
+        if(gameState == GameState.Intro)
+        {
+            textWriter.AddTextToWrite(dialogue, currentIntro, 0.02f);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -164,5 +176,24 @@ public class GameManager : MonoBehaviour
         gameOverImage.gameObject.SetActive(true);
         bgm.Stop();
         keyboard.isEnabled = false;
+    }
+    public void NextDialogue()
+    {
+        if((introIndex + 1) >= intro.Length)
+        {
+            //gameManager.gameState = GameManager.GameState.Quack;
+            ToNextQuack();
+            dialogueButton.gameObject.SetActive(false); 
+        }
+        else
+        {
+            introIndex += 1;
+            currentIntro = intro[introIndex];
+            if(gameState == GameState.Intro)
+            {
+                textWriter.AddTextToWrite(dialogue, currentIntro, 0.02f);
+            }       
+                
+        }
     }
 }

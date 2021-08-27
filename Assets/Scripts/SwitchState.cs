@@ -10,24 +10,32 @@ public class SwitchState : MonoBehaviour
     public TextWriter textWriter;
     public QuackCollection introCollection;
     public QuackCollection endingCollection;
-     private string[] intro;
+    private string[] intro;
+    private string[] ending;
+
     public Button startButton;
     public Text dialogue;
     public Text playerDialogue;
     public string currentIntro;
+    public string currentEnding;
     public int quackCount = 0;
     public int introIndex = 0;
+    public int endingIndex = 0;
     private void Awake() {
         intro = introCollection.collection;
         currentIntro = intro[introIndex];
-       
+        ending = endingCollection.collection;
+        currentEnding = ending[endingIndex];
+
     }
     void Start()
     {
+        Debug.Log("hi");
         gameManager = GameManager.instance;
+        
         if(gameManager.gameState == GameManager.GameState.Intro)
         {
-
+            
             textWriter.AddTextToWrite(dialogue, currentIntro, 0.02f);
         }
     }
@@ -35,23 +43,26 @@ public class SwitchState : MonoBehaviour
     {
         switch(gameManager.gameState){
             case GameManager.GameState.Intro:
-                if((introIndex + 1) >= intro.Length)
-                {
-                    gameManager.gameState = GameManager.GameState.Quack;
-                    gameManager.ToNextQuack();
-                    startButton.gameObject.SetActive(false);
-                }
-                else
-                {
-                    introIndex += 1;
-                    currentIntro = intro[introIndex];
-                    if(gameManager.gameState == GameManager.GameState.Intro)
-                    {
-                        textWriter.AddTextToWrite(dialogue, currentIntro, 0.02f);
-                    }       
                 
-                }
                 break;
+            case GameManager.GameState.Ending:
+                break;
+        }
+        if((introIndex + 1) >= intro.Length)
+        {
+            //gameManager.gameState = GameManager.GameState.Quack;
+            gameManager.ToNextQuack();
+            startButton.gameObject.SetActive(false); 
+        }
+        else
+        {
+            introIndex += 1;
+            currentIntro = intro[introIndex];
+            if(gameManager.gameState == GameManager.GameState.Intro)
+            {
+                textWriter.AddTextToWrite(dialogue, currentIntro, 0.02f);
+            }       
+                
         }
         
         

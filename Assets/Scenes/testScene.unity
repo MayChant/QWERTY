@@ -488,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &141003932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -631,7 +631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   keyboardMixer: {fileID: 140867540}
-  countTime: 310
+  countTime: 300
+  initialCountTime: 300
 --- !u!1 &334084187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1164,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Next
 --- !u!222 &750980584
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1414,7 +1415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quackCollection: {fileID: 11400000, guid: 46bd53393307def448b3d4babd2ed13c, type: 2}
+  introCollection: {fileID: 11400000, guid: e02ab0e0a142a2349a7e19ea06046b3a, type: 2}
   currentQuack: 
+  currentIntro: 
   feedback: 
   lives: 0
   streak: 0
@@ -1424,6 +1427,7 @@ MonoBehaviour:
   userInput: {fileID: 140867538}
   nextQuackButton: {fileID: 1342171180}
   submitButton: {fileID: 141003933}
+  dialogueButton: {fileID: 2142624263}
   healthBarSlider: {fileID: 895732381}
   healthBarHandle: {fileID: 499597643}
   fullHealthHandle: {fileID: 21300000, guid: 2460b0bd81dab824e9ecb512a246edb2, type: 3}
@@ -1432,9 +1436,9 @@ MonoBehaviour:
   gameOverImage: {fileID: 830351465}
   bossVoice: {fileID: 1426130974}
   timer: {fileID: 141003937}
+  bgm: {fileID: 0}
   textWriter: {fileID: 423838308}
-  previousState: 0
-  gameState: 1
+  gameState: 0
 --- !u!4 &820073047
 Transform:
   m_ObjectHideFlags: 0
@@ -1983,6 +1987,10 @@ PrefabInstance:
     - target: {fileID: 4590933391569580115, guid: 4b0d1492d38801c4e83e5bcf2ccfc827, type: 3}
       propertyPath: m_Name
       value: NextQuackButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590933391569580115, guid: 4b0d1492d38801c4e83e5bcf2ccfc827, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4590933392570525245, guid: 4b0d1492d38801c4e83e5bcf2ccfc827, type: 3}
       propertyPath: m_Text
@@ -3003,8 +3011,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -164.6, y: 0}
+  m_SizeDelta: {x: 59.975, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142624263
 MonoBehaviour:
@@ -3019,7 +3027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3049,7 +3057,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2142624264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820073046}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NextDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2142624264
 MonoBehaviour:
   m_ObjectHideFlags: 0

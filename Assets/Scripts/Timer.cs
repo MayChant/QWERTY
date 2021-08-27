@@ -16,11 +16,15 @@ public class Timer : MonoBehaviour
         time = countTime;
     }
     private void OnEnable() {
-        if(gameManager.gameState != GameManager.GameState.Endless)
+        if(gameManager != null)
         {
-            countTime -= 5;
+            if(gameManager.gameState != GameManager.GameState.Endless)
+            {
+                countTime -= 5;
+            }
+            time = countTime;
         }
-        time = countTime;
+        
     }
     void Update()
     {
