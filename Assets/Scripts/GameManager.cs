@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray();
+        quacks = quackCollection.collection.OrderBy(x => Random.value).ToArray().Take(8) as string[];
         quackIndex = -1;
         introIndex = -1;
         SetLives(12);
