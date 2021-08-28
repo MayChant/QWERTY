@@ -11,18 +11,22 @@ public class TextWriter : MonoBehaviour
      [SerializeField]
     private float timePerCharacter;
     private float timer;
+    private bool writing;
+    private Button controlButton;
 
-    public void AddTextToWrite(Text text, string textToWrite, float timePCharacter)
+    public void AddTextToWrite(Text text, string textToWrite, float timePCharacter, Button controlButton)
     {
         this.text = text;
         this.textToWrite = textToWrite;
         this.timePerCharacter = timePCharacter;
+        this.controlButton = controlButton;
+        writing = true;
         characterIndex = 0;
     }
     // Update is called once per frame
     void Update()
     {
-        if (text != null)
+        if (writing)
         {
             timer -= Time.deltaTime;
             while (timer <= 0f)
@@ -30,12 +34,14 @@ public class TextWriter : MonoBehaviour
                 //display next character
                 timer += timePerCharacter;
                 characterIndex++;
-                text.text = textToWrite.Substring(0, characterIndex);
-                if(characterIndex >= textToWrite.Length)
+                if (characterIndex > textToWrite.Length)
                 {
                     text = null;
+                    writing = false;
+                    controlButton.gameObject.SetActive(true);
                     return;
                 }
+                text.text = textToWrite.Substring(0, characterIndex);
             }
         }
     }
