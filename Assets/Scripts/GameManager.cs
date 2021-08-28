@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public Button nextQuackButton;
     public Button submitButton;
     public Button dialogueButton;
+    public Button skipIntroButton;
     public Slider healthBarSlider;
     public Image healthBarHandle;
     public Sprite fullHealthHandle;
@@ -63,7 +64,6 @@ public class GameManager : MonoBehaviour
         quackIndex = -1;
         introIndex = -1;
         SetLives(12);
-        bossVoice.PlayRandom();
         healthBarHandle.sprite = fullHealthHandle;
         intro = introCollection.collection;
         ToIntro();
@@ -75,7 +75,8 @@ public class GameManager : MonoBehaviour
         nextQuackButton.gameObject.SetActive(false);
         submitButton.gameObject.SetActive(false);
         gameOverImage.gameObject.SetActive(false);
-        dialogueButton.gameObject.SetActive(true);
+        dialogueButton.gameObject.SetActive(false);
+        skipIntroButton.gameObject.SetActive(true);
         keyboard.isEnabled = false;
         NextDialogue();
     }
@@ -104,6 +105,7 @@ public class GameManager : MonoBehaviour
         submitButton.gameObject.SetActive(true);
         gameOverImage.gameObject.SetActive(false);
         dialogueButton.gameObject.SetActive(false);
+        skipIntroButton.gameObject.SetActive(false);
         keyboard.isEnabled = true;
     }
 
@@ -161,6 +163,7 @@ public class GameManager : MonoBehaviour
         textWriter.AddTextToWrite(dialogue, feedback.ToUpper(), .02f, nextQuackButton);
         submitButton.gameObject.SetActive(false);
         gameOverImage.gameObject.SetActive(false);
+        skipIntroButton.gameObject.SetActive(false);
         keyboard.isEnabled = false;
     }
 
