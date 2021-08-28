@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour
         bgm.Stop();
         keyboard.isEnabled = false;
     }
-    public void ToWining()
+    public void ToWinning()
     {
         winningImage.gameObject.SetActive(true);
         skipIntroButton.gameObject.SetActive(false);
@@ -208,7 +208,7 @@ public class GameManager : MonoBehaviour
         }
         if((endingIndex + 1) >= ending.Length)
         {
-            ToWining();
+            ToWinning();
         }
         else
         {

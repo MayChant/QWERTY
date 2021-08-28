@@ -1004,8 +1004,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quackCollection: {fileID: 11400000, guid: 46bd53393307def448b3d4babd2ed13c, type: 2}
   introCollection: {fileID: 11400000, guid: e02ab0e0a142a2349a7e19ea06046b3a, type: 2}
+  endingCollection: {fileID: 11400000, guid: 4ffe9a762aa100a45b0cbeffe80a2f2e, type: 2}
   currentQuack: 
   currentIntro: 
+  currentEnding: 
   feedback: 
   lives: 0
   streak: 0
@@ -1023,6 +1025,7 @@ MonoBehaviour:
   halfHealthHandle: {fileID: 21300000, guid: 56b43935a6744344186a7f0eeb45051d, type: 3}
   noHealthHandle: {fileID: 21300000, guid: d2a01d75cafe1594bb99c02d0f450fb4, type: 3}
   gameOverImage: {fileID: 830351465}
+  winningImage: {fileID: 1150930155}
   bossVoice: {fileID: 1426130974}
   timer: {fileID: 141003937}
   bgm: {fileID: 580436646}
