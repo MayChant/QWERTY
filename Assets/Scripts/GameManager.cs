@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     private string[] intro;
     private string [] ending;
     private int quackIndex;
-    private int introIndex = 0;
-    private int endingIndex = 0;
+    private int introIndex;
+    private int endingIndex;
     public string currentQuack;
     public string currentIntro;
     public string currentEnding;
@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
         quacks = quackCollection.collection.OrderBy(x => Random.value).Take(8).ToArray();
         quackIndex = -1;
         introIndex = -1;
+        endingIndex = -1;
         SetLives(12);
         healthBarHandle.sprite = fullHealthHandle;
         intro = introCollection.collection;
@@ -234,7 +235,7 @@ public class GameManager : MonoBehaviour
         submitButton.gameObject.SetActive(false);
         dialogueButton.gameObject.SetActive(true);
         keyboard.isEnabled = false;
-        textWriter.AddTextToWrite(dialogue, currentEnding, 0.02f, dialogueButton);
+        NextDialogue();
     }
     private void SetLives(int number)
     {
