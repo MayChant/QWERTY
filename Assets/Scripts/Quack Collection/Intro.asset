@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   collection:
-  - dialogue0
+  - Hello, my new intern social media manager. I'm your boss now and you'll report
+    directly to me.
   - dialogue1
   - dialogue2
   - dialogue3
