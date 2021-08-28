@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
         {
             if(gameManager.gameState != GameManager.GameState.Endless)
             {
-                countTime -= 5;
+                countTime -= 10;
             }
             time = countTime;
         }

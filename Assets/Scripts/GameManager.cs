@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        quacks = quackCollection.collection.OrderBy(x => Random.value).Take(8).ToArray();
+        quacks = quackCollection.collection.OrderBy(x => Random.value).Take(5).ToArray();
         quackIndex = -1;
         introIndex = -1;
         endingIndex = -1;
@@ -101,7 +101,11 @@ public class GameManager : MonoBehaviour
 
     public void ToNextQuack()
     {
-        if(quackIndex + 1 >= quacks.Length)
+        if (lives <= 0)
+        {
+            ToGameOver();
+        }
+        else if (quackIndex + 1 >= quacks.Length)
         {
             ToEnding();
         }
@@ -186,7 +190,10 @@ public class GameManager : MonoBehaviour
     public void ToGameOver()
     {
         gameOverImage.gameObject.SetActive(true);
+        userInput.text = "";
+        dialogue.text = "";
         bgm.Stop();
+        keyboard.PlayWrong();
         keyboard.isEnabled = false;
     }
     public void ToWinning()
@@ -196,6 +203,7 @@ public class GameManager : MonoBehaviour
         submitButton.gameObject.SetActive(false);
         gameOverImage.gameObject.SetActive(false);
         dialogueButton.gameObject.SetActive(false);
+        keyboard.PlayCorrect();
         keyboard.isEnabled = false;
     }
     public void NextDialogue()
@@ -240,14 +248,7 @@ public class GameManager : MonoBehaviour
     private void SetLives(int number)
     {
         lives = number;
-        if (lives > 0)
-        {
-            ToFeedback();
-        }
-        else if (lives <= 0)
-        {
-            ToGameOver();
-        }
+        ToFeedback();
         healthBarSlider.value = lives;
         RenderHealthBarHandle();
     }

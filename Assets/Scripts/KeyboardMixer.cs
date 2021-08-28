@@ -913,8 +913,7 @@ public class KeyboardMixer : MonoBehaviour
         if (submission.Equals(currentQuack))
         {
             gameManager.feedback = "Good job.";
-            audioSource.clip = correct;
-            audioSource.Play();
+            PlayCorrect();
             return 0;
         }
         int errorCount = 0;
@@ -943,8 +942,19 @@ public class KeyboardMixer : MonoBehaviour
                 errorCount++;
             }
         }
+        PlayWrong();
+        return errorCount;
+    }
+
+    public void PlayCorrect()
+    {
+        audioSource.clip = correct;
+        audioSource.Play();
+    }
+
+    public void PlayWrong()
+    {
         audioSource.clip = wrong;
         audioSource.Play();
-        return errorCount;
     }
 }
